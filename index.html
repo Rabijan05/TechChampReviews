@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechChampReviews</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar will load here -->
+    <div id="navbar"></div>
+
+    <!-- Script to load navbar.html -->
+    <script>
+        fetch("navbar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+    </script>
+
+    <main>
+        <section>
+            <h2>Featured Review</h2>
+            <article>
+                <h3>Asus TUF Gaming F15 FX506HF</h3>
+                <img src="images/Asus TUF Gaming F15 FX506HF Home.jpg" alt="Asus TUF FX506HF" class="homepage-thumbnail">
+                <p>
+                    The Asus TUF Gaming F15 FX506HF is a mid-range gaming laptop with a 144Hz display and RTX 2050 graphics, ideal for 1080p gaming and multitasking.
+                    <a href="reviews/asus-tuf-fx506hf.html">Read full review</a>
+                </p>
+            
+                <h3>M4 Macbook Pro</h3>
+                <img src="images/M4 Macbook Pro Home.png" alt="M4 Macbook Pro" class="homepage-thumbnail">
+                <p>
+                    The M4 MacBook Pro is a high-performance laptop with a sleek design and long battery life, ideal for creative work, multitasking, and everyday use.
+                    <a href="reviews/M4-Macbook-Pro.html">Read full review</a>
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 TechChampReviews</p>
+    </footer>
+
+</body>
+</html>
