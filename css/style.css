@@ -110,3 +110,52 @@ a:hover {
     object-fit: cover;
     border-radius: 10px;
 }
+
+/* ========================= */
+/*        FEEDBACK FORM      */
+/* ========================= */
+
+form {
+    max-width: 700px;      /* Makes form wider */
+    margin: 40px auto;     /* Centers it */
+    padding: 30px;         /* Adds space inside */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form textarea {
+    min-height: 150px;   /* Makes message box bigger */
+    resize: vertical;
+}
+
+form button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background: #005bb5;
+}
