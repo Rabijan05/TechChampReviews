@@ -22,12 +22,19 @@ fetch("../navbar.html")
     <section>
         <h2>Best Office PCs & Laptops</h2>
 
-        <article>
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons">
+            <button class="active" onclick="filterSelection('all', this)">All</button>
+            <button onclick="filterSelection('budget', this)">Budget</button>
+            <button onclick="filterSelection('high', this)">High-End</button>
+        </div>
+
+        <!-- HIGH-END -->
+        <article data-category="high">
             <h3>M4 MacBook Pro</h3>
             <img src="../images/M4 Macbook Pro Home.png" class="homepage-thumbnail">
             <p>
-                A powerful and efficient laptop perfect for productivity,
-                creative work, and long battery life.
+                Premium productivity and creative performance.
                 <a href="../reviews/M4-Macbook-Pro.html">Read full review</a>
             </p>
         </article>
@@ -35,15 +42,32 @@ fetch("../navbar.html")
     </section>
 </main>
 
-    <div id="footer"></div>
+<div id="footer"></div>
 
-    <script>
-        fetch("/footer.html")
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById("footer").innerHTML = data;
-        });
-    </script>
+<script>
+fetch("../footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+
+/* FILTER FUNCTION */
+function filterSelection(category, button) {
+    const articles = document.querySelectorAll("article");
+    const buttons = document.querySelectorAll(".filter-buttons button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    articles.forEach(article => {
+        if (category === "all" || article.dataset.category === category) {
+            article.style.display = "block";
+        } else {
+            article.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>

@@ -22,11 +22,18 @@ fetch("../navbar.html")
     <section>
         <h2>Best Gaming Laptops</h2>
 
-        <article>
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons">
+            <button class="active" onclick="filterSelection('all', this)">All</button>
+            <button onclick="filterSelection('budget', this)">Budget</button>
+            <button onclick="filterSelection('high', this)">High-End</button>
+        </div>
+
+        <article data-category="budget">
             <h3>Asus TUF Gaming F15 FX506HF</h3>
             <img src="../images/Asus TUF Gaming F15 FX506HF Home.jpg" class="homepage-thumbnail">
             <p>
-                A strong mid-range gaming laptop with RTX graphics and a 144Hz display.
+                A strong high-performance gaming laptop with RTX graphics and 144Hz display.
                 <a href="../reviews/asus-tuf-fx506hf.html">Read full review</a>
             </p>
         </article>
@@ -34,15 +41,32 @@ fetch("../navbar.html")
     </section>
 </main>
 
-    <div id="footer"></div>
+<div id="footer"></div>
 
-    <script>
-        fetch("/footer.html")
-        .then(response => response.text())
-        .then(data => {
-        document.getElementById("footer").innerHTML = data;
-        });
-    </script>
+<script>
+fetch("../footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+
+/* FILTER FUNCTION */
+function filterSelection(category, button) {
+    const articles = document.querySelectorAll("article");
+    const buttons = document.querySelectorAll(".filter-buttons button");
+
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    articles.forEach(article => {
+        if (category === "all" || article.dataset.category === category) {
+            article.style.display = "block";
+        } else {
+            article.style.display = "none";
+        }
+    });
+}
+</script>
 
 </body>
 </html>
