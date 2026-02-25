@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lenovo Legion 5 Review | TechChampReviews</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+
+<div id="navbar"></div>
+
+<script>
+fetch("../navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Lenovo Legion 5 Review</h2>
+            <img src="../images/Lenovo Legion 5 Review.jpg" alt="Lenovo Legion 5" class="review-thumbnail">
+            <h3>Overview</h3>
+            <p>The Lenovo Legion 5 is a versatile gaming laptop known for its solid thermals, strong performance, and excellent display options, making it a great mid‑range choice.</p>
+
+            <h3>Key Specifications</h3>
+            <ul>
+                <li><strong>Processor:</strong> Intel Core i7‑13650HX</li>
+                <li><strong>Graphics:</strong> NVIDIA GeForce RTX 5060 8GB</li>
+                <li><strong>Display:</strong> 15" QHD+ OLED, 165 Hz</li>
+                <li><strong>Memory:</strong> 16GB DDR5</li>
+                <li><strong>Storage:</strong> 1TB SSD</li>
+                <li><strong>OS:</strong> Windows 11 Home</li>
+                <li><strong>Connectivity:</strong> Wi‑Fi 6E, Bluetooth, HDMI 2.1, USB‑C</li>
+                <li><strong>Battery:</strong> ~80 Wh</li>
+                <li><strong>Weight:</strong> ~2.4 kg</li>
+            </ul>
+
+            <h3>Performance</h3>
+            <p>This configuration handles AAA gaming at 1080p and QHD with strong frame rates, especially utilizing DLSS and optimized drivers.</p>
+
+            <h3>Display & Visuals</h3>
+            <p>The 165 Hz QHD+ OLED display delivers vibrant colors and sharp detail, great for gaming and media consumption.</p>
+
+            <h3>Upgrade Potential</h3>
+            <p>Dual SO‑DIMM slots let you expand RAM and there’s extra SSD room for storage upgrades.</p>
+
+            <h3>Pros & Cons</h3>
+            <ul>
+                <li><strong>Pros:</strong> Great thermals, premium display, balanced performance.</li>
+                <li><strong>Cons:</strong> Slightly heavier, battery life varies with OLED brightness.</li>
+            </ul>
+
+            <h3>Buy Now</h3>
+            <a href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Check Price & Buy on Amazon</a>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>

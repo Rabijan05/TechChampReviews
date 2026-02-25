@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple MacBook Pro 13-inch M2 Review | TechChampReviews</title>
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+
+<div id="navbar"></div>
+
+<script>
+fetch("../navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <h2>Apple MacBook Pro 13-inch M2 Review</h2>
+            <img src="../images/MacBook Pro 13 M2 Review.jpg" alt="Apple MacBook Pro 13-inch M2" class="review-thumbnail">
+            <h3>Overview</h3>
+            <p>The Apple MacBook Pro 13-inch M2 offers excellent CPU and GPU performance with outstanding battery life. It’s ideal for students, professionals, and creators needing smooth multitasking and portability.</p>
+
+            <h3>Key Specifications</h3>
+            <ul>
+                <li><strong>Processor:</strong> Apple M2 8‑core CPU</li>
+                <li><strong>Graphics:</strong> Integrated 10-core GPU</li>
+                <li><strong>Display:</strong> 13.3" Retina, 2560×1600, True Tone</li>
+                <li><strong>Memory:</strong> 8GB unified (configurable up to 24GB)</li>
+                <li><strong>Storage:</strong> 256GB SSD (configurable up to 2TB)</li>
+                <li><strong>OS:</strong> macOS Ventura</li>
+                <li><strong>Connectivity:</strong> Wi‑Fi 6, Bluetooth 5.3, 2× Thunderbolt/USB‑4</li>
+                <li><strong>Battery:</strong> 58.2 Wh</li>
+                <li><strong>Weight:</strong> 1.4 kg</li>
+            </ul>
+
+            <h3>Performance</h3>
+            <p>Excellent for productivity, coding, and light gaming. Handles creative apps like Final Cut Pro, Photoshop, and Logic Pro very efficiently.</p>
+
+            <h3>Display & Visuals</h3>
+            <p>Retina display ensures crisp text and vibrant colors, ideal for creative work and media consumption.</p>
+
+            <h3>Upgrade Potential</h3>
+            <p>Memory and storage upgrades must be configured at purchase; no post-purchase upgrades.</p>
+
+            <h3>Pros & Cons</h3>
+            <ul>
+                <li><strong>Pros:</strong> Excellent battery life, compact, strong CPU/GPU for productivity.</li>
+                <li><strong>Cons:</strong> Limited gaming performance, upgrades only at purchase.</li>
+            </ul>
+
+            <h3>Buy Now</h3>
+            <a href="YOUR_AFFILIATE_LINK_HERE" target="_blank">Check Price & Buy on Amazon</a>
+        </article>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
