@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback | TechChampReviews</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<script>
+fetch("../navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<main>
+    <section>
+        <h2>Defining Filters</h2>
+
+        <article>
+            <p>
+                Budget: $800CAD or less
+            </p>
+        </article>
+
+        <article>
+            <p>
+                High-End: More than $800CAD
+            </p>
+        </article>
+
+        <h2>Point of this Site</h2>
+        
+        <article>
+            <p>
+                This site exists to provide specs and an idea of what to expect of these devices in terms of performance, battery life, and other factors. It is not meant to be a comprehensive review of every aspect of the devices, but rather a general overview to help users make informed decisions.
+            </p>
+        </article>
+    </section>
+</main>
+
+    <div id="footer"></div>
+
+    <script>
+        fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+</body>
+</html>
